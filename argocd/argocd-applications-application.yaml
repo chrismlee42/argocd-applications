@@ -12,3 +12,5 @@ spec:
     path: argocd
     repoURL: https://github.com/chrismlee42-dev/argocd-applications.git
     targetRevision: HEAD
+  syncPolicy:
+    automated: {}
