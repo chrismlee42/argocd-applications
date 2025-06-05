@@ -35,7 +35,8 @@
             "helm": "latest",
             "minikube": "none",
             "version": "latest"
-        }
+        },
+        "ghcr.io/audacioustux/devcontainers/kustomize:1": {}
 	},
 
 	"mounts": [
