@@ -36,7 +36,7 @@ spec:
       ref: helm
       repoURL: https://charts.jetstack.io
       targetRevision: v1.15.2
-    - chart : cert-manager-webhook
+    - chart : cert-manager-webhook-he
       helm:
         releaseName: cert-manager-webhook-he
         valuesObject:
@@ -57,7 +57,7 @@ spec:
             port: 443
       ref: helm-webhook
       repoURL: ghcr.io/waldner/charts/cert-manager-webhook-he
-      targetRevision: 0.0.6
+      targetRevision: "0.0.6"
   syncPolicy:
     automated:
       prune: true
