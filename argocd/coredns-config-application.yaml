@@ -1,0 +1,87 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: coredns
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: coredns
+    # server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42-dev/coredns-config.git
+      targetRevision: HEAD
+    - chart: etcd
+      helm:
+        releaseName: coredns
+        valuesObject:
+          replicaCount: 1
+          auth:
+            rbac:
+              create: false
+          commonLabels:
+            app: etcd
+            managedBy: argocd
+            managementCodeGroup: chrismlee42-dev
+            managementCodeProject: argocd-applications
+          persistence:
+            storageClass: local-path
+          serviceAccount:
+            create: true
+            name: etcd
+      ref: helm-etcd
+      repoURL: registry-1.docker.io/bitnamicharts
+      targetRevision: "10.2.4"
+    - chart: coredns
+      helm:
+        releaseName: coredns
+        valuesObject:
+          installCRDs: true
+          isClusterService: false
+          serviceType: LoadBalancer
+          customLabels:
+            app: coredns
+            managedBy: argocd
+            managementCodeGroup: chrismlee42-dev
+            managementCodeProject: argocd-applications
+          rbac:
+            create: false
+          servers:
+            - port: 53
+              zones:
+                - zone: chris-pc.clee.private.morphacy.net
+                - zone: service.clee.private.morphacy.net
+                - zone: service.chris-pc.clee.private.morphacy.net
+              plugins:
+                # - name: cache
+                #   parameters: 30
+                - name: errors
+                - name: etcd
+                  parameters: "clee.private.morphacy.net chris-pc.clee.private.morphacy.net service.clee.private.morphacy.net service.chris-pc.clee.private.morphacy.net"
+                  configBlock: |-
+                    endpoint http://etcd.coredns.svc.cluster.local:2379
+                    path /skydns
+                    stubzones
+                # Serves a /health endpoint on :8080, required for livenessProbe
+                - name: health
+                  configBlock: |-
+                    lameduck 5s
+                - name: loadbalance
+                - name: log
+                - name: loop
+                # Serves a /ready endpoint on :8181, required for readinessProbe
+                - name: ready
+                - name: reload
+          serviceAccount:
+            create: true
+            name: coredns
+      ref: helm-coredns
+      repoURL: https://coredns.github.io/helm
+      targetRevision: "1.31.0"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
