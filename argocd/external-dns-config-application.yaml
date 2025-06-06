@@ -48,8 +48,8 @@ spec:
             - ingress
             - service
       ref: helm
-      repoURL: https://kubernetes-sigs.github.io
-      targetRevision: v0.17.0
+      repoURL: https://kubernetes-sigs.github.io/external-dns/
+      targetRevision: "0.17.0"
   syncPolicy:
     automated:
       prune: true
