@@ -49,7 +49,7 @@ spec:
             - service
       ref: helm
       repoURL: https://kubernetes-sigs.github.io/external-dns/
-      targetRevision: "0.17.0"
+      targetRevision: "1.16.1"
   syncPolicy:
     automated:
       prune: true
