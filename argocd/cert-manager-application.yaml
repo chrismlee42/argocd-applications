@@ -36,6 +36,28 @@ spec:
       ref: helm
       repoURL: https://charts.jetstack.io
       targetRevision: v1.15.2
+    - chart : cert-manager-webhook
+      helm:
+        releaseName: cert-manager-webhook-he
+        valuesObject:
+          groupName: cert-manager.chris-pc.clee.private.morphacy.net
+          nameOverride: cert-manager-webhook-he
+          auth:
+            useSecrets: true
+          certManager:
+            namespace: cert-manager
+            serviceAccountName: cert-manager
+          rbac:
+            secretNames:
+              - he-credentials
+            secretNamespaces:
+              - cert-manager
+          service:
+            type: ClusterIP
+            port: 443
+      ref: helm-webhook
+      repoURL: oci://ghcr.io/waldner/charts/cert-manager-webhook-he
+      targetRevision: 0.0.6
   syncPolicy:
     automated:
       prune: true
