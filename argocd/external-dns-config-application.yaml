@@ -1,0 +1,56 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-dns
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: kube-system
+    # server: https://kubernetes.default.svc
+  project: default
+  sources:
+    # - path: argocd
+    #   ref: path
+    #   repoURL: https://github.com/chrismlee42-dev/external-dns-config.git
+    #   targetRevision: HEAD
+    - chart: external-dns
+      helm:
+        releaseName: external-dns
+        valuesObject:
+          logLevel: debug
+          # policy: sync
+          policy: upsert-only
+          provider: coredns
+          commonLabels:
+            app: external-dns
+            managedBy: argocd
+            managementCodeGroup: chrismlee42-dev
+            managementCodeProject: argocd-applications
+          domainFilters:
+            - clee.private.morphacy.net
+            - chris-pc.clee.private.morphacy.net
+            - service.clee.private.morphacy.net
+            - service.chris-pc.clee.private.morphacy.net
+          env:
+            - name: ETCD_URLS
+              value: http://etcd.coredns.svc.cluster.local:2379
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
+              namespace: observability
+          serviceAccount:
+            create: true
+            name: external-dns
+          sources:
+            - gateway-httproute
+            - ingress
+            - service
+      ref: helm
+      repoURL: https://kubernetes-sigs.github.io/external-dns/
+      targetRevision: v0.17.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
