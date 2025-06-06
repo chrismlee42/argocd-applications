@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: cert-manager
+    # server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42-dev/cert-manager-config.git
+      targetRevision: HEAD
+    - chart: cert-manager
+      helm:
+        releaseName: cert-manager
+        valuesObject:
+          dns01RecursiveNameservers: 1.1.1.1:53,8.8.8.8:53
+          replicaCount: 1
+          cainjector:
+            replicaCount: 1
+          crds:
+            enabled: false
+          ingressShim:
+            defaultIssuerGroup: cert-manager.chris-pc.clee.private.morphacy.net
+            defaultIssuerKind: ClusterIssuer
+            defaultIssuerName: letsencrypt-prod
+          serviceAccount:
+            create: true
+            name: cert-manager
+          webhook:
+            replicaCount: 1
+      ref: helm
+      repoURL: https://charts.jetstack.io
+      targetRevision: v1.15.2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
