@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: local-path-provisioner
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: kube-system
+    # server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42-dev/local-path-provisioner-config.git
+      targetRevision: HEAD
+    - chart: local-path-provisioner
+      helm:
+        releaseName: local-path-provisioner
+        valuesObject:
+          replicaCount: 1
+          serviceAccount:
+            create: true
+            name: local-path
+          storageClass:
+            defaultClass: true
+          tolerations:
+            - key: "node-role.kubernetes.io/control-plane"
+              operator: "Exists"
+              effect: "NoSchedule"
+      ref: helm
+      repoURL: https://charts.containeroo.ch
+      targetRevision: 0.0.30
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
