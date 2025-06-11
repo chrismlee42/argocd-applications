@@ -30,7 +30,7 @@ spec:
               effect: "NoSchedule"
       ref: helm
       repoURL: https://charts.containeroo.ch
-      targetRevision: 0.0.30
+      targetRevision: 0.0.31
   syncPolicy:
     automated:
       prune: true
