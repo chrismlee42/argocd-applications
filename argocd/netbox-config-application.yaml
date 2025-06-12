@@ -32,6 +32,10 @@ spec:
             sslMode: prefer
             targetSessionAttrs: read-write
             username: netbox
+          postgresql:
+            auth:
+              existingSecret: netbox-postgres
+            enabled: true
           service:
             type: ClusterIP
             # type: LoadBalancer
