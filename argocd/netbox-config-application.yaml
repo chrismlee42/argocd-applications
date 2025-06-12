@@ -18,16 +18,16 @@ spec:
       helm:
         releaseName: netbox
         valuesObject:
-          cachingRedis:
-            host: ~
+          # cachingRedis:
+          #   host: ~
           externalDatabase:
             connMaxAge: 300
             # database: netbox
             disableServerSideCursors: false
             # existingSecretKey: password
             existingSecretName: netbox-postgres
-            host: ~
-            password: ~
+            # host: ~
+            # password: ~
             port: 5432
             sslMode: prefer
             targetSessionAttrs: read-write
@@ -37,8 +37,8 @@ spec:
             # type: LoadBalancer
           superuser:
             existingSecret: netbox-superuser-config
-          taskRedis:
-            host: ~
+          # taskRedis:
+          #   host: ~
       ref: helm
       repoURL: ghcr.io/netbox-community/netbox-chart
       targetRevision: 5.0.0-beta.67
