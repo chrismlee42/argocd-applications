@@ -25,7 +25,7 @@ spec:
             # database: netbox
             disableServerSideCursors: false
             # existingSecretKey: password
-            existingSecretName: netbox-postgres
+            existingSecretName: netbox-postgresql
             # host: ~
             # password: ~
             port: 5432
