@@ -53,7 +53,7 @@ spec:
     syncOptions:
       - RespectIgnoreDifferences=true
   ignoreDifferences:
-    - # group: core
+    - group: core
       kind: Secret
       name: netbox-postgresql
       namespace: netbox
