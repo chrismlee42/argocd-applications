@@ -57,3 +57,5 @@ spec:
       kind: Secret
       name: netbox-postgresql
       namespace: netbox
+      jsonPointers:
+        - /data
