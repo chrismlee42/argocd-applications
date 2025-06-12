@@ -22,8 +22,10 @@ spec:
             host: ~
           externalDatabase:
             connMaxAge: 300
-            databse: netbox
+            # database: netbox
             disableServerSideCursors: false
+            # existingSecretKey: password
+            existingSecretName: netbox-postgres
             host: ~
             password: ~
             port: 5432
