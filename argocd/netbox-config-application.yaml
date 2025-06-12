@@ -34,7 +34,7 @@ spec:
             username: netbox
           postgresql:
             auth:
-              existingSecret: netbox-postgres
+              existingSecret: netbox-postgresql
             enabled: true
           service:
             type: ClusterIP
