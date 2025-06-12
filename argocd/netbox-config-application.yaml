@@ -50,3 +50,8 @@ spec:
     automated:
       prune: true
       selfHeal: false
+  ignoreDifferences:
+    - group: core
+      kind: Secret
+      name: netbox-postgresql
+      namespace: netbox
