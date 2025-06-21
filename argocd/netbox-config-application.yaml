@@ -14,43 +14,43 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42-dev/netbox-config.git
       targetRevision: HEAD
-    - chart: netbox
-      helm:
-        releaseName: netbox
-        valuesObject:
-          # cachingRedis:
-          #   host: ~
-          externalDatabase:
-            connMaxAge: 300
-            # database: netbox
-            disableServerSideCursors: false
-            # existingSecretKey: password
-            existingSecretName: netbox-postgresql
-            # host: ~
-            # password: ~
-            port: 5432
-            sslMode: prefer
-            targetSessionAttrs: read-write
-            username: netbox
-          global:
-            postgresql:
-              auth:
-                existingSecret: netbox-postgresql
-              secretKeys:
-                adminPasswordKey: postgres-password
-                userPasswordKey: password
-          postgresql:
-            enabled: true
-          service:
-            type: ClusterIP
-            # type: LoadBalancer
-          superuser:
-            existingSecret: netbox-superuser-config
-          # taskRedis:
-          #   host: ~
-      ref: helm
-      repoURL: ghcr.io/netbox-community/netbox-chart
-      targetRevision: 5.0.0-beta.67
+    # - chart: netbox
+    #   helm:
+    #     releaseName: netbox
+    #     valuesObject:
+    #       # cachingRedis:
+    #       #   host: ~
+    #       externalDatabase:
+    #         connMaxAge: 300
+    #         # database: netbox
+    #         disableServerSideCursors: false
+    #         # existingSecretKey: password
+    #         existingSecretName: netbox-postgresql
+    #         # host: ~
+    #         # password: ~
+    #         port: 5432
+    #         sslMode: prefer
+    #         targetSessionAttrs: read-write
+    #         username: netbox
+    #       global:
+    #         postgresql:
+    #           auth:
+    #             existingSecret: netbox-postgresql
+    #           secretKeys:
+    #             adminPasswordKey: postgres-password
+    #             userPasswordKey: password
+    #       postgresql:
+    #         enabled: true
+    #       service:
+    #         type: ClusterIP
+    #         # type: LoadBalancer
+    #       superuser:
+    #         existingSecret: netbox-superuser-config
+    #       # taskRedis:
+    #       #   host: ~
+    #   ref: helm
+    #   repoURL: ghcr.io/netbox-community/netbox-chart
+    #   targetRevision: 5.0.0-beta.67
   syncPolicy:
     automated:
       prune: true
