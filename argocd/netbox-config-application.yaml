@@ -36,6 +36,9 @@ spec:
             auth:
               existingSecret: netbox-postgresql
             enabled: true
+            secretKeys:
+              adminPasswordKey: postgres-password
+              userPasswordKey: password
           service:
             type: ClusterIP
             # type: LoadBalancer
