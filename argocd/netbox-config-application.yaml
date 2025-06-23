@@ -60,12 +60,6 @@ spec:
   ignoreDifferences:
     - # group: core
       kind: Secret
-      name: netbox-postgresql
-      namespace: netbox
-      jsonPointers:
-        - /data
-    - # group: core
-      kind: Secret
       name: postgresql-superuser
       namespace: netbox
       jsonPointers:
