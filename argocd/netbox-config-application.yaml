@@ -64,3 +64,15 @@ spec:
       namespace: netbox
       jsonPointers:
         - /data
+    - # group: core
+      kind: Secret
+      name: netbox-postgresql-superuser
+      namespace: netbox
+      jsonPointers:
+        - /data
+    - # group: core
+      kind: Secret
+      name: netbox-postgresql-user
+      namespace: netbox
+      jsonPointers:
+        - /data
