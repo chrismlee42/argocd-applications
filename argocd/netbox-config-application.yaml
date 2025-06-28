@@ -53,8 +53,8 @@ spec:
     #   targetRevision: 5.0.0-beta.67
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
     syncOptions:
       - RespectIgnoreDifferences=true
   ignoreDifferences:
