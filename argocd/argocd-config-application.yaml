@@ -20,6 +20,7 @@ spec:
         valuesObject:
           configs:
             params:
+              redis.compression: none
               server.enable.gzip: true
               server.insecure: true
           global:
