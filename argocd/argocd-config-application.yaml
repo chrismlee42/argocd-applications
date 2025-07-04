@@ -20,8 +20,8 @@ spec:
         valuesObject:
           configs:
             params:
-              redis.compression: gzip
-              server.enable.gzip: true
+              redis.compression: none
+              server.enable.gzip: false
               server.insecure: true
           global:
             domain: argocd.service.clee.private.morphacy.net
