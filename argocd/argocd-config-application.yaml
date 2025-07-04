@@ -30,7 +30,7 @@ spec:
                 ingress.cilium.io/tls-passthrough: enabled
       ref: helm
       repoURL: https://argoproj.github.io/argo-helm
-      targetRevision: 8.1.2
+      targetRevision: 8.1.1
   syncPolicy:
     automated:
       prune: true
