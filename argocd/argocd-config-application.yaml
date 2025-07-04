@@ -20,7 +20,7 @@ spec:
         valuesObject:
           configs:
             params:
-              redis.compression: none
+              # redis.compression: none
               server.insecure: true
           global:
             domain: argocd.service.clee.private.morphacy.net
