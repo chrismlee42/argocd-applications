@@ -14,23 +14,23 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42-dev/argocd-config.git
       targetRevision: HEAD
-    - chart: argo-cd
-      helm:
-        releaseName: argocd
-        valuesObject:
-          configs:
-            params:
-              # redis.compression: none
-              server.insecure: true
-          global:
-            domain: argocd.service.clee.private.morphacy.net
-          server:
-            ingress:
-              annotations:
-                ingress.cilium.io/tls-passthrough: enabled
-      ref: helm
-      repoURL: https://argoproj.github.io/argo-helm
-      targetRevision: 8.1.2
+    # - chart: argo-cd
+    #   helm:
+    #     releaseName: argocd
+    #     valuesObject:
+    #       configs:
+    #         params:
+    #           # redis.compression: none
+    #           server.insecure: true
+    #       global:
+    #         domain: argocd.service.clee.private.morphacy.net
+    #       server:
+    #         ingress:
+    #           annotations:
+    #             ingress.cilium.io/tls-passthrough: enabled
+    #   ref: helm
+    #   repoURL: https://argoproj.github.io/argo-helm
+    #   targetRevision: 8.1.2
   syncPolicy:
     automated:
       prune: false
