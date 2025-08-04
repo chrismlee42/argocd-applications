@@ -35,7 +35,7 @@ spec:
             replicaCount: 1
       ref: helm
       repoURL: https://charts.jetstack.io
-      targetRevision: v1.17.2
+      targetRevision: v1.18.2
     - chart: cert-manager-webhook-he
       helm:
         releaseName: cert-manager-webhook-he
