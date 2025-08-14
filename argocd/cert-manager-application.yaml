@@ -12,7 +12,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/cert-manager-config.git
+      repoURL: https://github.com/chrismlee42/cert-manager-config.git
       targetRevision: HEAD
     - chart: cert-manager
       helm:

@@ -12,7 +12,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/argocd-config.git
+      repoURL: https://github.com/chrismlee42/argocd-config.git
       targetRevision: HEAD
   syncPolicy:
     automated:

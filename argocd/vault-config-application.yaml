@@ -11,7 +11,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/vault-config.git
+      repoURL: https://github.com/chrismlee42/vault-config.git
       targetRevision: HEAD
     - chart: vault
       helm:

@@ -12,7 +12,7 @@ spec:
   sources:
     # - path: argocd
     #   ref: path
-    #   repoURL: https://github.com/chrismlee42-dev/external-dns-config.git
+    #   repoURL: https://github.com/chrismlee42/external-dns-config.git
     #   targetRevision: HEAD
     - chart: external-dns
       helm:
@@ -25,7 +25,7 @@ spec:
           commonLabels:
             app: external-dns
             managedBy: argocd
-            managementCodeGroup: chrismlee42-dev
+            managementCodeGroup: chrismlee42
             managementCodeProject: argocd-applications
           domainFilters:
             - clee.private.morphacy.net

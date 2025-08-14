@@ -12,7 +12,7 @@
 #   sources:
 #     - path: argocd
 #       ref: path
-#       repoURL: https://github.com/chrismlee42-dev/keycloak-config.git
+#       repoURL: https://github.com/chrismlee42/keycloak-config.git
 #       targetRevision: HEAD
 #     # - chart: argo-cd
 #     #   helm:

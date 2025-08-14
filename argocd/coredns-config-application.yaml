@@ -12,7 +12,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/coredns-config.git
+      repoURL: https://github.com/chrismlee42/coredns-config.git
       targetRevision: HEAD
     - chart: etcd
       helm:
@@ -25,7 +25,7 @@ spec:
           commonLabels:
             app: etcd
             managedBy: argocd
-            managementCodeGroup: chrismlee42-dev
+            managementCodeGroup: chrismlee42
             managementCodeProject: argocd-applications
           persistence:
             storageClass: local-path
@@ -45,7 +45,7 @@ spec:
           customLabels:
             app: coredns
             managedBy: argocd
-            managementCodeGroup: chrismlee42-dev
+            managementCodeGroup: chrismlee42
             managementCodeProject: argocd-applications
           rbac:
             create: false

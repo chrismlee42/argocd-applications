@@ -12,7 +12,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/netbox-config.git
+      repoURL: https://github.com/chrismlee42/netbox-config.git
       targetRevision: HEAD
     # - chart: netbox
     #   helm:

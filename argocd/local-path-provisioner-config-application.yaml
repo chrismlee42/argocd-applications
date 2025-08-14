@@ -12,7 +12,7 @@ spec:
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42-dev/local-path-provisioner-config.git
+      repoURL: https://github.com/chrismlee42/local-path-provisioner-config.git
       targetRevision: HEAD
     - chart: local-path-provisioner
       helm:
