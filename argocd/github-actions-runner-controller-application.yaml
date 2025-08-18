@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: github-actions-runner-controller
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: github-actions-runner-controller
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/github-actions-runner-controller-config.git
+      targetRevision: HEAD
+    - chart: gha-runner-scale-set-controller
+      helm:
+        releaseName: github-actions-runner-controller
+        valuesObject: {}
+      ref: helm
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
+  # ignoreDifferences:
+  #   - group: '*'
+  #     kind: '*'
+  #     managedFieldsManagers:
+  #       - vault-k8s
