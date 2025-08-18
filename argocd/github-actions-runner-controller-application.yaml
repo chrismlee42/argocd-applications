@@ -16,7 +16,8 @@ spec:
     - chart: gha-runner-scale-set-controller
       helm:
         releaseName: github-actions-runner-controller
-        valuesObject: {}
+        valuesObject:
+          githubConfigSecret: github-config
       ref: helm
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
