@@ -15,7 +15,7 @@ spec:
       targetRevision: HEAD
     - chart: gha-runner-scale-set-controller
       helm:
-        releaseName: chrismlee42-github-actions-runner-controller
+        releaseName: github-actions-runner-controller
         valuesObject:
           githubConfigSecret: github-config
       ref: helm
