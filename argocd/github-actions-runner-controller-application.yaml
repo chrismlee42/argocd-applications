@@ -25,6 +25,9 @@ spec:
       helm:
         releaseName: gha-runners
         valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
       ref: helm-runner
       repoURL: ghcr.io/actions/actions-runner-controller-charts
