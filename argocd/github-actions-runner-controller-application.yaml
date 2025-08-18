@@ -27,8 +27,18 @@ spec:
     syncOptions:
       - RespectIgnoreDifferences=true
       - ServerSideApply=true
-  # ignoreDifferences:
-  #   - group: '*'
-  #     kind: '*'
-  #     managedFieldsManagers:
-  #       - vault-k8s
+  ignoreDifferences:
+    - group: '*'
+      kind: '*'
+      jqPathExpressions:
+        - |
+          def parsePath(pathStr):
+            (pathStr | split(".")[1:]) as $parts | $parts | map(
+              if test("^\\w+\\[\\d+\\]$") then
+                capture("(?<key>\\w+)\\[(?<index>\\d+)\\]") | [.key, (.index | tonumber)]
+              else
+                [.]
+              end
+            ) | add
+          ;
+          . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
