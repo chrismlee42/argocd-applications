@@ -1,24 +1,28 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: github-actions-runner-controller
+  name: github-actions-runner
   namespace: argocd
 spec:
   destination:
     name: in-cluster
-    namespace: github-actions-runner-controller
+    namespace: github-actions-runner
   project: default
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42/github-actions-runner-controller-config.git
+      repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
       targetRevision: HEAD
-    - chart: gha-runner-scale-set-controller
+    - chart: gha-runner-scale-set
       helm:
-        releaseName: github-actions-runner-controller
+        releaseName: gha-runners
         valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-      ref: helm-controller
+          githubConfigUrl: https://github.com/chrismlee42
+      ref: helm-runner
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
   syncPolicy:
@@ -46,6 +50,6 @@ spec:
     - # group: core
       kind: Secret
       name: github-config
-      namespace: github-actions-runner-controller
+      namespace: github-actions-runner
       jsonPointers:
         - /data
