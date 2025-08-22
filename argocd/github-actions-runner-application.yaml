@@ -13,18 +13,18 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
       targetRevision: HEAD
-    # - chart: gha-runner-scale-set
-    #   helm:
-    #     releaseName: gha-runners
-    #     valuesObject:
-    #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller
-    #         name: github-actions-runner-controller-gha-rs-controller
-    #       githubConfigSecret: github-config
-    #       githubConfigUrl: https://github.com/chrismlee42
-    #   ref: helm-runner
-    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-    #   targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42
+      ref: helm-runner
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
   syncPolicy:
     automated:
       prune: true
