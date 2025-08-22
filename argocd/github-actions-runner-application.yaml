@@ -111,7 +111,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-github-actions-runner-controller-config
+        releaseName: gha-runners-gha-runner-controller-config
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
