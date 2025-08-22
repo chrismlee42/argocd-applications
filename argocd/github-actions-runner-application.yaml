@@ -15,14 +15,218 @@ spec:
       targetRevision: HEAD
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners
+        releaseName: gha-runners-argocd-applications-config
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/*
-      ref: helm-runner
+          githubConfigUrl: https://github.com/chrismlee42/argocd-applications-config
+      ref: helm-argocd-applications-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-argocd-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/argocd-config
+      ref: helm-argocd-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-cert-manager-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/cert-manager-config
+      ref: helm-cert-manager-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-cilium-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/cilium-config
+      ref: helm-cilium-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-coredns-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/coredns-config
+      ref: helm-coredns-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-external-dns-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/external-dns-config
+      ref: helm-external-dns-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-external-secrets-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/external-secrets-config
+      ref: helm-external-secrets-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-github-actions-runner-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-config
+      ref: helm-coredns-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-github-actions-runner-controller-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-controller-config
+      ref: helm-github-actions-runner-controller-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-keycloak-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/keycloak-config
+      ref: helm-keycloak-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-local-path-provisioner-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/local-path-provisioner-config
+      ref: helm-local-path-provisioner-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-metrics-server-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/metrics-server-config
+      ref: helm-metrics-server-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-netbox-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/netbox-config
+      ref: helm-netbox-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-nvidia-k8s-device-plugin-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
+      ref: helm-nvidia-k8s-device-plugin-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-prometheus-operator-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/prometheus-operator-config
+      ref: helm-prometheus-operator-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-secrets-store-csi-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-config
+      ref: helm-secrets-store-csi-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-valkey-operator-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/valkey-operator-config
+      ref: helm-valkey-operator-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-vault-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/vault-config
+      ref: helm-vault-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
   syncPolicy:
