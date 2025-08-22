@@ -106,7 +106,7 @@ spec:
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
           githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-config
-      ref: helm-coredns-config
+      ref: helm-github-actions-runner-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
