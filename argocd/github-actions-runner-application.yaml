@@ -15,14 +15,14 @@ spec:
       targetRevision: HEAD
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-argocd-applications-config
+        releaseName: gha-runners-argocd-applications
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/argocd-applications-config
-      ref: helm-argocd-applications-config
+          githubConfigUrl: https://github.com/chrismlee42/argocd-applications
+      ref: helm-argocd-applications
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
