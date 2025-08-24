@@ -7,7 +7,7 @@ on:
 jobs:
   sync:
     runs-on:
-      - self-hosted
+      - gha-runners-argocd-applications
       - ubuntu-latest
     steps:
       - name: Sync ArgoCD Applications
