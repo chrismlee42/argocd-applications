@@ -4,13 +4,13 @@ metadata:
   name: argocd-applications
   namespace: argocd
 
-labels:
-  - includeSelectors: true
-    pairs:
-      app: argocd-applications
-      managedBy: argocd
-      managementCodeGroup: chrismlee42
-      managementCodeProject: argocd-applications
+# labels:
+#   - includeSelectors: true
+#     pairs:
+#       app: argocd-applications
+#       managedBy: argocd
+#       managementCodeGroup: chrismlee42
+#       managementCodeProject: argocd-applications
 
 resources:
   - argocd-applications-application.yaml
