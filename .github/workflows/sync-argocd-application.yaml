@@ -1,0 +1,19 @@
+name: Sync ArgoCD Applications
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on:
+      - self-hosted
+      - ubuntu-latest
+    steps:
+      - name: Sync ArgoCD Applications
+        uses: argoproj/argocd-actions@v2
+        with:
+          argocd_server: ${{ secrets.ARGOCD_SERVER }}
+          argocd_username: ${{ secrets.ARGOCD_USERNAME }}
+          argocd_password: ${{ secrets.ARGOCD_PASSWORD }}
+          command: app sync argocd-applications
