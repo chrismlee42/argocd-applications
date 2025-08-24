@@ -2,12 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: valkey-operator
-  namespace: argocd
 spec:
   destination:
     name: in-cluster
     namespace: valkey-operator-system
-    # server: https://kubernetes.default.svc
   project: default
   sources:
     - path: argocd

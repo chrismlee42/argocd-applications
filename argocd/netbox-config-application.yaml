@@ -2,12 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: netbox
-  namespace: argocd
 spec:
   destination:
     name: in-cluster
     namespace: netbox
-    # server: https://kubernetes.default.svc
   project: default
   sources:
     - path: argocd
@@ -72,8 +70,7 @@ spec:
             ) | add
           ;
           . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
-    - # group: core
-      kind: Secret
+    - kind: Secret
       name: postgresql-app
       namespace: netbox
       jsonPointers:

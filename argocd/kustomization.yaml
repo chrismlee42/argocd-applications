@@ -1,0 +1,35 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: argocd-applications
+
+labels:
+  - includeSelectors: true
+    pairs:
+      app: argocd-applications
+      managedBy: argocd
+      managementCodeGroup: chrismlee42
+      managementCodeProject: argocd-applications
+
+namespace: argocd
+
+resources:
+  - argocd-applications-application.yaml
+  - argocd-config-application.yaml
+  - cert-manager-application.yaml
+  - cilium-application.yaml
+  - cloudnative-pg-application.yaml
+  - coredns-application.yaml
+  - external-dns-application.yaml
+  - external-secrets-application.yaml
+  - github-actions-runner-application.yaml
+  - github-actions-runner-controller-application.yaml
+  - keycloak-application.yaml
+  - local-path-provisioner-application.yaml
+  - metrics-server-application.yaml
+  - netbox-application.yaml
+  - nvidia-k8s-device-plugin-application.yaml
+  - prometheus-operator-application.yaml
+  - secrets-store-csi-driver-config-application.yaml
+  - valkey-operator-application.yaml
+  - vault-application.yaml
