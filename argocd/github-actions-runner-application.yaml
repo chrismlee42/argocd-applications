@@ -20,7 +20,7 @@ spec:
       targetRevision: HEAD
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-argocd-applications
+        releaseName: chris-pc-argocd-applications
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -34,7 +34,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-argocd-config
+        releaseName: chris-pc-argocd
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -48,7 +48,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-cert-manager-config
+        releaseName: chris-pc-cert-manager
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -62,7 +62,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-cilium-config
+        releaseName: chris-pc-cilium
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -76,7 +76,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-coredns-config
+        releaseName: chris-pc-coredns
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -90,7 +90,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-external-dns-config
+        releaseName: chris-pc-external-dns
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -104,7 +104,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-external-secrets-config
+        releaseName: chris-pc-external-secrets
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -118,7 +118,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-github-actions-runner-config
+        releaseName: chris-pc-github-actions-runner
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -132,7 +132,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-gha-runner-controller-config
+        releaseName: chris-pc-gha-runner-controller
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -146,7 +146,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-keycloak-config
+        releaseName: chris-pc-keycloak
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -160,7 +160,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-local-path-provisioner-config
+        releaseName: chris-pc-local-path-provisioner
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -174,7 +174,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-metrics-server-config
+        releaseName: chris-pc-metrics-server
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -188,7 +188,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-netbox-config
+        releaseName: chris-pc-netbox
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -200,23 +200,23 @@ spec:
       ref: helm-netbox-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
-    # - chart: gha-runner-scale-set
-    #   helm:
-    #     releaseName: gha-runners-nvidia-k8s-device-plugin-config
-    #     valuesObject:
-    #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller
-    #         name: github-actions-runner-controller-gha-rs-controller
-    #       githubConfigSecret: github-config
-    #       githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
-    #       minRunners: 1
-    #       namespace: github-actions-runner
-    #   ref: helm-nvidia-k8s-device-plugin-config
-    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-    #   targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-prometheus-operator-config
+        releaseName: chris-pc-nvidia-k8s-device-plugin
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-nvidia-k8s-device-plugin-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: chris-pc-prometheus-operator
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -228,23 +228,23 @@ spec:
       ref: helm-prometheus-operator-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
-    # - chart: gha-runner-scale-set
-    #   helm:
-    #     releaseName: gha-runners-secrets-store-csi-driver-config
-    #     valuesObject:
-    #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller
-    #         name: github-actions-runner-controller-gha-rs-controller
-    #       githubConfigSecret: github-config
-    #       githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
-    #       minRunners: 1
-    #       namespace: github-actions-runner
-    #   ref: helm-secrets-store-csi-driver-config
-    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-    #   targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-valkey-operator-config
+        releaseName: chris-pc-secrets-store-csi-driver
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-secrets-store-csi-driver-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: chris-pc-valkey-operator
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
@@ -258,7 +258,7 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
-        releaseName: gha-runners-vault-config
+        releaseName: chris-pc-vault
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
