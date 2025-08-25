@@ -228,20 +228,20 @@ spec:
       ref: helm-prometheus-operator-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
-    # - chart: gha-runner-scale-set
-    #   helm:
-    #     releaseName: gha-runners-secrets-store-csi-driver-config
-    #     valuesObject:
-    #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller
-    #         name: github-actions-runner-controller-gha-rs-controller
-    #       githubConfigSecret: github-config
-    #       githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
-    #       minRunners: 1
-    #       namespace: github-actions-runner
-    #   ref: helm-secrets-store-csi-driver-config
-    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-    #   targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
+        releaseName: gha-runners-secrets-store-csi-driver-config
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-secrets-store-csi-driver-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
         releaseName: gha-runners-valkey-operator-config
