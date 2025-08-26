@@ -1,40 +1,40 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   labels:
-#     app: argocd-applications
-#     managedBy: argocd
-#     managementCodeGroup: chrismlee42
-#     managementCodeProject: argocd-applications
-#   name: keycloak
-#   namespace: argocd
-# spec:
-#   destination:
-#     name: in-cluster
-#     namespace: keycloak
-#   project: default
-#   sources:
-#     - path: argocd
-#       ref: path
-#       repoURL: https://github.com/chrismlee42/keycloak-config.git
-#       targetRevision: HEAD
-#     # - chart: argo-cd
-#     #   helm:
-#     #     releaseName: argocd
-#     #     valuesObject:
-#     #       configs:
-#     #         params:
-#     #           server.insecure: true
-#     #       global:
-#     #         domain: argocd.service.clee.private.morphacy.net
-#     #       server:
-#     #         ingress:
-#     #           annotations:
-#     #             ingress.cilium.io/tls-passthrough: enabled
-#     #   ref: helm
-#     #   repoURL: https://argoproj.github.io/argo-helm
-#     #   targetRevision: 7.9.0
-#   syncPolicy:
-#     automated:
-#       prune: true
-#       selfHeal: true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: keycloak
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: keycloak
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/keycloak-config.git
+      targetRevision: HEAD
+    # - chart: argo-cd
+    #   helm:
+    #     releaseName: argocd
+    #     valuesObject:
+    #       configs:
+    #         params:
+    #           server.insecure: true
+    #       global:
+    #         domain: argocd.service.clee.private.morphacy.net
+    #       server:
+    #         ingress:
+    #           annotations:
+    #             ingress.cilium.io/tls-passthrough: enabled
+    #   ref: helm
+    #   repoURL: https://argoproj.github.io/argo-helm
+    #   targetRevision: 7.9.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
