@@ -146,6 +146,20 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
+        releaseName: chris-pc-grafana-operator
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/grafana-operator-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-grafana-operator-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
         releaseName: chris-pc-keycloak
         valuesObject:
           controllerServiceAccount:
@@ -226,20 +240,6 @@ spec:
           minRunners: 1
           namespace: github-actions-runner
       ref: helm-nvidia-k8s-device-plugin-config
-      repoURL: ghcr.io/actions/actions-runner-controller-charts
-      targetRevision: 0.12.1
-    - chart: gha-runner-scale-set
-      helm:
-        releaseName: chris-pc-prometheus-operator
-        valuesObject:
-          controllerServiceAccount:
-            namespace: github-actions-runner-controller
-            name: github-actions-runner-controller-gha-rs-controller
-          githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/prometheus-operator-config
-          minRunners: 1
-          namespace: github-actions-runner
-      ref: helm-prometheus-operator-config
       repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
