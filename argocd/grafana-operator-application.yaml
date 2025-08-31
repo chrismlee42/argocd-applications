@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: grafana-operator
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: grafana-operator
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/grafana-operator-config.git
+      targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - ServerSideApply=true
