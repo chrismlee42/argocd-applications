@@ -38,7 +38,7 @@ spec:
             - service.chris-pc.clee.private.morphacy.net
           env:
             - name: ETCD_URLS
-              value: http://etcd.coredns.svc.cluster.local:2379
+              value: http://coredns-etcd.coredns.svc.cluster.local:2379
           metrics:
             enabled: true
             serviceMonitor:
