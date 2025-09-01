@@ -6,17 +6,17 @@ metadata:
     managedBy: argocd
     managementCodeGroup: chrismlee42
     managementCodeProject: argocd-applications
-  name: rook
+  name: ceph
   namespace: argocd
 spec:
   destination:
     name: in-cluster
-    namespace: rook
+    namespace: ceph
   project: default
   sources:
     - path: argocd
       ref: path
-      repoURL: https://github.com/chrismlee42/rook-config.git
+      repoURL: https://github.com/chrismlee42/ceph-config.git
       targetRevision: HEAD
   syncPolicy:
     automated:
