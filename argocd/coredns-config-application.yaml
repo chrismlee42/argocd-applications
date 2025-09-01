@@ -66,7 +66,7 @@ spec:
                 - name: etcd
                   parameters: "clee.private.morphacy.net chris-pc.clee.private.morphacy.net service.clee.private.morphacy.net service.chris-pc.clee.private.morphacy.net"
                   configBlock: |-
-                    endpoint http://etcd.coredns.svc.cluster.local:2379
+                    endpoint http://coredns-etcd.coredns.svc.cluster.local:2379
                     path /skydns
                     stubzones
                 # Serves a /health endpoint on :8080, required for livenessProbe
