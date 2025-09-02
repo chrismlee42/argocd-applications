@@ -18,23 +18,23 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/local-path-provisioner-config.git
       targetRevision: HEAD
-    - chart: local-path-provisioner
-      helm:
-        releaseName: local-path-provisioner
-        valuesObject:
-          replicaCount: 1
-          serviceAccount:
-            create: true
-            name: local-path
-          storageClass:
-            defaultClass: true
-          tolerations:
-            - key: "node-role.kubernetes.io/control-plane"
-              operator: "Exists"
-              effect: "NoSchedule"
-      ref: helm
-      repoURL: https://charts.containeroo.ch
-      targetRevision: 0.0.31
+    # - chart: local-path-provisioner
+    #   helm:
+    #     releaseName: local-path-provisioner
+    #     valuesObject:
+    #       replicaCount: 1
+    #       serviceAccount:
+    #         create: true
+    #         name: local-path
+    #       storageClass:
+    #         defaultClass: true
+    #       tolerations:
+    #         - key: "node-role.kubernetes.io/control-plane"
+    #           operator: "Exists"
+    #           effect: "NoSchedule"
+    #   ref: helm
+    #   repoURL: https://charts.containeroo.ch
+    #   targetRevision: 0.0.31
   syncPolicy:
     automated:
       prune: true
