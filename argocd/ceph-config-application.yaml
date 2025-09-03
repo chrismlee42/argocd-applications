@@ -22,14 +22,14 @@ spec:
       helm:
         releaseName: ceph
         valuesObject:
-          # cephBlockPools:
-          #   - name: mgr
-          #     spec:
-          #       name: .mgr
-          #       failureDomain: host
-          #       replicated:
-          #         requireSafeReplicaSize: false
-          #         size: 1
+          cephBlockPools:
+            - name: mgr
+              spec:
+                name: .mgr
+                failureDomain: host
+                replicated:
+                  requireSafeReplicaSize: false
+                  size: 1
           cephClusterSpec:
             cephConfig:
               global:
