@@ -23,7 +23,7 @@ spec:
         releaseName: rook
         valuesObject: {}
       ref: helm
-      repoURL: https://chargs.rook.io/release
+      repoURL: https://charts.rook.io/release
       targetRevision: v1.18.1
   syncPolicy:
     automated:
