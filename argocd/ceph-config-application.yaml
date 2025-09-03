@@ -25,11 +25,15 @@ spec:
           cephBlockPools:
             - name: mgr
               spec:
-                name: mgr
+                name: .mgr
                 failureDomain: host
                 replicated:
                   requireSafeReplicaSize: false
                   size: 1
+              storageClass:
+                enabled: true
+                name: ceph-block
+                isDefault: false
           cephClusterSpec:
             cephConfig:
               global:
