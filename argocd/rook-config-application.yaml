@@ -18,6 +18,13 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/rook-config.git
       targetRevision: HEAD
+    - chart: rook
+      helm:
+        releaseName: rook
+        valuesObject: {}
+      ref: helm
+      repoURL: https://chargs.rook.io/release
+      targetRevision: v1.18.1
   syncPolicy:
     automated:
       prune: true
