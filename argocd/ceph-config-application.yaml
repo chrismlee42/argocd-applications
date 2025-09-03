@@ -25,7 +25,7 @@ spec:
           cephBlockPools:
             - name: mgr
               spec:
-                name: .mgr
+                name: mgr
                 failureDomain: host
                 replicated:
                   requireSafeReplicaSize: false
