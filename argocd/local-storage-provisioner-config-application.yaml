@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: local-storage-provisioner
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: local-storage-provisioner
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/local-storage-provisioner-config.git
+      targetRevision: HEAD
+    - chart: local-static-provisioner
+      helm:
+        releaseName: local-storage-provisioner
+        valuesObject:
+          classes: []
+            # - name: local-storage
+            #   hostDir: /var/lib/local-storage-provisioner/vol0
+            #   volumeMode: Block
+            #   volumeBindingMode: WaitForFirstConsumer
+          serviceAccount:
+            create: true
+            name: local-storage-provisioner
+          tolerations:
+            - key: "node-role.kubernetes.io/control-plane"
+              operator: "Exists"
+              effect: "NoSchedule"
+      ref: helm
+      repoURL: https://kubernetes-sigs.github.io/sig-storage-local-static-provisioner
+      targetRevision: 2.8.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

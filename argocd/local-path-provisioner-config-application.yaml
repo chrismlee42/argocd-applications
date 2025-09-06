@@ -11,7 +11,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: kube-system
+    namespace: local-path-storage
   project: default
   sources:
     - path: argocd
