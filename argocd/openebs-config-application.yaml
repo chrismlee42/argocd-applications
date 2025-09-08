@@ -18,41 +18,41 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/openebs-config.git
       targetRevision: HEAD
-    # - chart: openebs
-    #   helm:
-    #     releaseName: openebs
-    #     valuesObject:
-    #       engines:
-    #         local:
-    #           lvm:
-    #             enabled: false
-    #           zfs:
-    #             enabled: false
-    #         replicated:
-    #           mayastor:
-    #             enabled: false
-    #       lvm-localpv:
-    #         crds:
-    #           lvm-localpv:
-    #             enabled: false
-    #       mayastor:
-    #         csi:
-    #           node:
-    #             initContainers:
-    #               enabled: false
-    #       minio:
-    #         replicas: 1
-    #       singleBinary:
-    #         replicas: 1
-    #         persistence:
-    #           enabled: true
-    #       zfs-localpv:
-    #         crds:
-    #           zfsLocalPv:
-    #             enabled: false
-    #   ref: helm
-    #   repoURL: https://openebs.github.io/openebs
-    #   targetRevision: v4.3.3
+    - chart: openebs
+      helm:
+        releaseName: openebs
+        valuesObject:
+          engines:
+            local:
+              lvm:
+                enabled: false
+              zfs:
+                enabled: false
+            replicated:
+              mayastor:
+                enabled: false
+          lvm-localpv:
+            crds:
+              lvm-localpv:
+                enabled: false
+          mayastor:
+            csi:
+              node:
+                initContainers:
+                  enabled: false
+          minio:
+            replicas: 1
+          singleBinary:
+            replicas: 1
+            persistence:
+              enabled: true
+          zfs-localpv:
+            crds:
+              zfsLocalPv:
+                enabled: false
+      ref: helm
+      repoURL: https://openebs.github.io/openebs
+      targetRevision: v4.3.3
   syncPolicy:
     automated:
       prune: true
