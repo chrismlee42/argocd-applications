@@ -1,71 +1,71 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  labels:
-    app: argocd-applications
-    managedBy: argocd
-    managementCodeGroup: chrismlee42
-    managementCodeProject: argocd-applications
-  name: openebs
-  namespace: argocd
-spec:
-  destination:
-    name: in-cluster
-    namespace: openebs
-  project: default
-  sources:
-    - path: argocd
-      ref: path
-      repoURL: https://github.com/chrismlee42/openebs-config.git
-      targetRevision: HEAD
-    - chart: openebs
-      helm:
-        releaseName: openebs
-        valuesObject:
-          engines:
-            local:
-              lvm:
-                enabled: false
-              zfs:
-                enabled: false
-            replicated:
-              mayastor:
-                enabled: false
-          loki:
-            loki:
-              commonConfig:
-                replication_factor: 1
-            minio:
-              replicas: 1
-            singleBinary:
-              replicas: 1
-              persistence:
-                enabled: true
-          lvm-localpv:
-            crds:
-              lvm-localpv:
-                enabled: false
-          mayastor:
-            csi:
-              node:
-                initContainers:
-                  enabled: false
-          zfs-localpv:
-            crds:
-              zfsLocalPv:
-                enabled: false
-      ref: helm
-      repoURL: https://openebs.github.io/openebs
-      targetRevision: v4.3.3
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - RespectIgnoreDifferences=true
-      - ServerSideApply=true
-  # ignoreDifferences:
-  #   - group: '*'
-  #     kind: '*'
-  #     managedFieldsManagers:
-  #       - vault-k8s
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   labels:
+#     app: argocd-applications
+#     managedBy: argocd
+#     managementCodeGroup: chrismlee42
+#     managementCodeProject: argocd-applications
+#   name: openebs
+#   namespace: argocd
+# spec:
+#   destination:
+#     name: in-cluster
+#     namespace: openebs
+#   project: default
+#   sources:
+#     - path: argocd
+#       ref: path
+#       repoURL: https://github.com/chrismlee42/openebs-config.git
+#       targetRevision: HEAD
+#     - chart: openebs
+#       helm:
+#         releaseName: openebs
+#         valuesObject:
+#           engines:
+#             local:
+#               lvm:
+#                 enabled: false
+#               zfs:
+#                 enabled: false
+#             replicated:
+#               mayastor:
+#                 enabled: false
+#           loki:
+#             loki:
+#               commonConfig:
+#                 replication_factor: 1
+#             minio:
+#               replicas: 1
+#             singleBinary:
+#               replicas: 1
+#               persistence:
+#                 enabled: true
+#           lvm-localpv:
+#             crds:
+#               lvm-localpv:
+#                 enabled: false
+#           mayastor:
+#             csi:
+#               node:
+#                 initContainers:
+#                   enabled: false
+#           zfs-localpv:
+#             crds:
+#               zfsLocalPv:
+#                 enabled: false
+#       ref: helm
+#       repoURL: https://openebs.github.io/openebs
+#       targetRevision: v4.3.3
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - RespectIgnoreDifferences=true
+#       - ServerSideApply=true
+#   # ignoreDifferences:
+#   #   - group: '*'
+#   #     kind: '*'
+#   #     managedFieldsManagers:
+#   #       - vault-k8s
