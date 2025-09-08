@@ -31,6 +31,10 @@ spec:
             replicated:
               mayastor:
                 enabled: false
+          loki:
+            loki:
+              commonConfig:
+                replication_factor: 1
           lvm-localpv:
             crds:
               lvm-localpv:
