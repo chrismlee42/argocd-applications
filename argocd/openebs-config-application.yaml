@@ -40,6 +40,12 @@ spec:
               node:
                 initContainers:
                   enabled: false
+          minio:
+            replicas: 1
+          singleBinary:
+            replicas: 1
+            persistence:
+              enabled: true
           zfs-localpv:
             crds:
               zfsLocalPv:
