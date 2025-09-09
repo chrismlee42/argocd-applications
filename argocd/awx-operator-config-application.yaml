@@ -18,15 +18,15 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/awx-operator-config.git
       targetRevision: HEAD
-    - chart: awx-operator
-      helm:
-        releaseName: awx-operator
-        valuesObject:
-          AWX:
-            enabled: false
-      ref: helm
-      repoURL: https://ansible-community.github.io/awx-operator-helm/
-      targetRevision: 3.2.0
+    # - chart: awx-operator
+    #   helm:
+    #     releaseName: awx-operator
+    #     valuesObject:
+    #       AWX:
+    #         enabled: false
+    #   ref: helm
+    #   repoURL: https://ansible-community.github.io/awx-operator-helm/
+    #   targetRevision: 3.2.0
   syncPolicy:
     automated:
       prune: true
