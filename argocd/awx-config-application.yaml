@@ -45,6 +45,11 @@ spec:
       jsonPointers:
         - /data
     - kind: Secret
+      name: awx-postgres-configuration
+      namespace: awx
+      jsonPointers:
+        - /data
+    - kind: Secret
       name: awx-secret-key
       namespace: awx
       jsonPointers:
