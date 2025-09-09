@@ -64,3 +64,8 @@ spec:
       namespace: awx
       jsonPointers:
         - /data
+    - kind: Secret
+      name: postgresql-tls
+      namespace: awx
+      jsonPointers:
+        - /data
