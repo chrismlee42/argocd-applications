@@ -40,17 +40,22 @@ spec:
           ;
           . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
     - kind: Secret
+      name: awx-admin-password
+      namespace: awx
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: awx-secret-key
+      namespace: awx
+      jsonPointers:
+        - /data
+    - kind: Secret
       name: postgresql-app
       namespace: awx
       jsonPointers:
         - /data
     - kind: Secret
       name: postgresql-superuser
-      namespace: awx
-      jsonPointers:
-        - /data
-    - kind: Secret
-      name: postgresql-user
       namespace: awx
       jsonPointers:
         - /data
