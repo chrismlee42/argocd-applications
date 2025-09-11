@@ -45,7 +45,7 @@ spec:
               enabled: true
           ingressController:
             default: false
-            enabled: true
+            enabled: false
             # loadbalancerMode: shared
           ipam:
             operator:
