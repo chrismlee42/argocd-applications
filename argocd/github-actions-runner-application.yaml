@@ -160,6 +160,19 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
+        releaseName: chris-pc-freeipa
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/freeipa-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-gateway-freeipa
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+    - chart: gha-runner-scale-set
+      helm:
         releaseName: chris-pc-gateway
         valuesObject:
           controllerServiceAccount:
