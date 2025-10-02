@@ -146,6 +146,20 @@ spec:
       targetRevision: 0.12.1
     - chart: gha-runner-scale-set
       helm:
+        releaseName: chris-pc-elk
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/chrismlee42/elk-config
+          minRunners: 1
+          namespace: github-actions-runner
+      ref: helm-elk-config
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.12.1
+    - chart: gha-runner-scale-set
+      helm:
         releaseName: chris-pc-external-dns
         valuesObject:
           controllerServiceAccount:
