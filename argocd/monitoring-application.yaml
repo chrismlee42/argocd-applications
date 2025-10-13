@@ -18,13 +18,13 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/monitoring-config.git
       targetRevision: HEAD
-    - chart: grafana
-      helm:
-        releaseName: grafana
-        valuesObject: {}
-      ref: helm-grafana
-      repoURL: https://grafana.github.io/helm-charts
-      targetRevision: 10.1.0
+    # - chart: grafana
+    #   helm:
+    #     releaseName: grafana
+    #     valuesObject: {}
+    #   ref: helm-grafana
+    #   repoURL: https://grafana.github.io/helm-charts
+    #   targetRevision: 10.1.0
   syncPolicy:
     automated:
       prune: true
