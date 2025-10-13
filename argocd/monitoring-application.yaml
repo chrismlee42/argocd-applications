@@ -22,7 +22,7 @@ spec:
       helm:
         releaseName: grafana
         valuesObject: {}
-      ref: helm
+      ref: helm-grafana
       repoURL: https://grafana.github.io/helm-charts
       targetRevision: 10.1.0
   syncPolicy:
