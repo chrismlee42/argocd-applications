@@ -59,7 +59,7 @@ spec:
           service:
             type: ClusterIP
             port: 443
-      ref: helm-webhook
+      ref: helm-trust-manager
       repoURL: ghcr.io/waldner/charts
       targetRevision: "0.0.7"
     - chart: trust-manager
