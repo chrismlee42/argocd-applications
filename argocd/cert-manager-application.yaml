@@ -59,14 +59,14 @@ spec:
           service:
             type: ClusterIP
             port: 443
-      ref: helm-trust-manager
+      ref: helm-webhook
       repoURL: ghcr.io/waldner/charts
       targetRevision: "0.0.7"
     - chart: trust-manager
       helm:
         releaseName: trust-manager
         valuesObject: {}
-      ref: helm
+      ref: helm-trust-manager
       repoURL: https://charts.jetstack.io
       targetRevision: v0.20.2
   syncPolicy:
