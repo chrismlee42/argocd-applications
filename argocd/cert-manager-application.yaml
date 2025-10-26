@@ -62,6 +62,13 @@ spec:
       ref: helm-webhook
       repoURL: ghcr.io/waldner/charts
       targetRevision: "0.0.7"
+    - chart: trust-manager
+      helm:
+        releaseName: trust-manager
+        valuesObject: {}
+      ref: helm
+      repoURL: https://charts.jetstack.io
+      targetRevision: v0.20.2
   syncPolicy:
     automated:
       prune: true
