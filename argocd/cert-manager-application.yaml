@@ -40,6 +40,13 @@ spec:
       ref: helm
       repoURL: https://charts.jetstack.io
       targetRevision: v1.19.1
+    - chart: cert-manager-csi-driver
+      helm:
+        releaseName: cert-manager-csi-driver
+        valuesObject: {}
+      ref: helm-cert-manager-csi-driver
+      repoURL: https://charts.jetstack.io
+      targetRevision: v0.11.1
     - chart: cert-manager-webhook-he
       helm:
         releaseName: cert-manager-webhook-he
