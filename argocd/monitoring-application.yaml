@@ -47,3 +47,13 @@ spec:
             ) | add
           ;
           . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
+    - kind: Secret
+      name: elk-es-http-tls
+      namespace: monitoring
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: elk-kb-http-tls
+      namespace: monitoring
+      jsonPointers:
+        - /data
