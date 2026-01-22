@@ -14,10 +14,10 @@ spec:
     namespace: github-actions-runner
   project: default
   sources:
-    - path: argocd
-      ref: path
-      repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
-      targetRevision: HEAD
+    # - path: argocd
+    #   ref: path
+    #   repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
+    #   targetRevision: HEAD
     - chart: gha-runner-scale-set
       helm:
         releaseName: chris-pc-argocd-applications

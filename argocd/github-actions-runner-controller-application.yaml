@@ -1,41 +1,41 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   labels:
-#     app: argocd-applications
-#     managedBy: argocd
-#     managementCodeGroup: chrismlee42
-#     managementCodeProject: argocd-applications
-#   name: github-actions-runner-controller
-#   namespace: argocd
-# spec:
-#   destination:
-#     name: in-cluster
-#     namespace: github-actions-runner-controller
-#   project: default
-#   sources:
-#     - path: argocd
-#       ref: path
-#       repoURL: https://github.com/chrismlee42/github-actions-runner-controller-config.git
-#       targetRevision: HEAD
-#     # - chart: gha-runner-scale-set-controller
-#     #   helm:
-#     #     releaseName: github-actions-runner-controller
-#     #     valuesObject:
-#     #       githubConfigSecret: github-config
-#     #   ref: helm-controller
-#     #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-#     #   targetRevision: 0.13.0
-#   syncPolicy:
-#     automated:
-#       prune: true
-#       selfHeal: true
-#     syncOptions:
-#       - RespectIgnoreDifferences=true
-#       - ServerSideApply=true
-#   ignoreDifferences:
-#     - kind: Secret
-#       name: github-config
-#       namespace: github-actions-runner-controller
-#       jsonPointers:
-#         - /data
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: github-actions-runner-controller
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: github-actions-runner-controller
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/github-actions-runner-controller-config.git
+      targetRevision: HEAD
+    # - chart: gha-runner-scale-set-controller
+    #   helm:
+    #     releaseName: github-actions-runner-controller
+    #     valuesObject:
+    #       githubConfigSecret: github-config
+    #   ref: helm-controller
+    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
+    #   targetRevision: 0.13.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
+      - ServerSideApply=true
+  ignoreDifferences:
+    - kind: Secret
+      name: github-config
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
