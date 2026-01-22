@@ -31,7 +31,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-argocd-applications
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-argocd
@@ -45,7 +45,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-argocd-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-awx
@@ -59,7 +59,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-awx-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-awx-operator
@@ -73,7 +73,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-awx-operator-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-ceph
@@ -87,7 +87,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-ceph-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-cert-manager
@@ -101,7 +101,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-cert-manager-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-cilium
@@ -115,7 +115,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-cilium-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-coredns
@@ -129,7 +129,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-coredns-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-eck
@@ -143,7 +143,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-eck-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-elk
@@ -157,7 +157,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-elk-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-external-dns
@@ -171,7 +171,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-external-dns-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-external-secrets
@@ -185,7 +185,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-external-secrets-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-fluentd
@@ -199,7 +199,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-fluentd-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-freeipa
@@ -213,7 +213,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-freeipa-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-gateway
@@ -227,7 +227,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-gateway-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-github-actions-runner
@@ -241,7 +241,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-gha-runner-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-gha-runner-controller
@@ -255,7 +255,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-gha-runner-controller-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-grafana-operator
@@ -269,7 +269,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-grafana-operator-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-keycloak
@@ -283,7 +283,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-keycloak-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-local-path-provisioner
@@ -297,7 +297,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-local-path-provisioner-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-local-storage
@@ -311,7 +311,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-local-storage-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-local-storage-provisioner
@@ -325,7 +325,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-local-storage-provisioner-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-metrics-server
@@ -339,7 +339,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-metrics-server-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-netbox
@@ -353,7 +353,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-netbox-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-monitoring
@@ -367,7 +367,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-monitoring-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-nvidia-k8s-device-plugin
@@ -381,7 +381,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-nvidia-k8s-device-plugin-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     # - chart: actions-runner-controller-charts/gha-runner-scale-set
     #   helm:
     #     releaseName: chris-pc-openebs
@@ -395,7 +395,7 @@ spec:
     #       namespace: github-actions-runner
     #   ref: helm-openebs-config
     #   repoURL: ghcr.io/actions
-    #   targetRevision: 0.13.0
+    #   targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-rook
@@ -409,7 +409,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-rook-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-secrets-store-csi-driver
@@ -423,7 +423,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-secrets-store-csi-driver-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-valkey-operator
@@ -437,7 +437,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-valkey-operator-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
         releaseName: chris-pc-vault
@@ -451,7 +451,7 @@ spec:
           namespace: github-actions-runner
       ref: helm-vault-config
       repoURL: ghcr.io/actions
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
   syncPolicy:
     automated:
       prune: true
