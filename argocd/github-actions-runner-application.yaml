@@ -22,9 +22,10 @@ spec:
       helm:
         releaseName: chris-pc-argocd-applications
         valuesObject:
-          # controllerServiceAccount:
-          #   namespace: github-actions-runner-controller
-          #   name: github-actions-runner-controller-gha-rs-controller
+          controllerServiceAccount:
+            namespace: github-actions-runner
+            name: default
+            # name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
           githubConfigUrl: https://github.com/chrismlee42/argocd-applications
           minRunners: 0
