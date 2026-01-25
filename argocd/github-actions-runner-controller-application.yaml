@@ -25,7 +25,7 @@ spec:
           githubConfigSecret: github-config
       ref: helm-controller
       repoURL: ghcr.io/actions/actions-runner-controller-charts
-      targetRevision: 0.13.0
+      targetRevision: 0.13.1
   syncPolicy:
     automated:
       prune: true
