@@ -27,7 +27,7 @@ spec:
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
           githubConfigUrl: https://github.com/chrismlee42/argocd-applications
-          minRunners: 0
+          minRunners: 1
           namespace: github-actions-runner
       ref: helm-argocd-applications
       repoURL: ghcr.io/actions
