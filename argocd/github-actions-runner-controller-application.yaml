@@ -24,16 +24,8 @@ spec:
         valuesObject:
           githubConfigSecret: github-config
       ref: helm-controller
-      repoURL: ghcr.io/actions
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
       targetRevision: 0.13.0
-    # - chart: gha-runner-scale-set-controller
-    #   helm:
-    #     releaseName: github-actions-runner-controller
-    #     valuesObject:
-    #       githubConfigSecret: github-config
-    #   ref: helm-controller
-    #   repoURL: ghcr.io/actions/actions-runner-controller-charts
-    #   targetRevision: 0.13.0
   syncPolicy:
     automated:
       prune: true
