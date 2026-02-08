@@ -21,7 +21,7 @@ spec:
     - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
       helm:
         installCrds: false
-        releaseName: github-actions-runner-controller
+        releaseName: github-actions-runner-controller-chrismlee42
         valuesObject:
           githubConfigSecret: github-config
       ref: helm-controller
