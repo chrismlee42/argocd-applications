@@ -1,0 +1,57 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: github-actions-runner-controller-chrismlee42
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: github-actions-runner-controller-chrismlee42
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/github-actions-runner-controller-chrismlee42-config.git
+      targetRevision: HEAD
+    - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
+      helm:
+        installCrds: false
+        releaseName: github-actions-runner-controller
+        valuesObject:
+          githubConfigSecret: github-config
+      ref: helm-controller
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
+      - ServerSideApply=true
+  ignoreDifferences:
+    - kind: Secret
+      name: github-config
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: github-config-chrismlee42
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: github-config-morphacy
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: github-config-mutinysoftware
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
