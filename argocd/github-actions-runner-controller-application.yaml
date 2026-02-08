@@ -23,7 +23,7 @@ spec:
         releaseName: github-actions-runner-controller-chrismlee42
         valuesObject:
           githubConfigSecret: github-config-chrismlee42
-      ref: helm-controller
+      ref: helm-controller-chrismlee42
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
@@ -31,7 +31,7 @@ spec:
         releaseName: github-actions-runner-controller-morphacy
         valuesObject:
           githubConfigSecret: github-config-morphacy
-      ref: helm-controller
+      ref: helm-controller-morphacy
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
@@ -39,7 +39,7 @@ spec:
         releaseName: github-actions-runner-controller-mutinysoftware
         valuesObject:
           githubConfigSecret: github-config-mutinysoftware
-      ref: helm-controller
+      ref: helm-controller-mutinysoftware
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
   syncPolicy:
