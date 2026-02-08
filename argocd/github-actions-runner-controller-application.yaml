@@ -22,7 +22,7 @@ spec:
       helm:
         releaseName: github-actions-runner-controller
         valuesObject:
-          githubConfigSecret: github-config
+          githubConfigSecret: github-config-chrismlee42
       ref: helm-controller
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
