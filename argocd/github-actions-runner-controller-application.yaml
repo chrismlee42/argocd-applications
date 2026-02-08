@@ -39,3 +39,18 @@ spec:
       namespace: github-actions-runner-controller
       jsonPointers:
         - /data
+    - kind: Secret
+      name: github-config-chrismlee42
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: github-config-morphacy
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
+    - kind: Secret
+      name: github-config-mutinysoftware
+      namespace: github-actions-runner-controller
+      jsonPointers:
+        - /data
