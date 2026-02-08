@@ -342,16 +342,16 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
-        releaseName: chris-pc-morphacy-entities-journaling
+        releaseName: chris-pc-morphacy
         valuesObject:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/Morphacy/Morphacy.Entities.Journaling
+          githubConfigUrl: https://github.com/Morphacy/Morphacy
           minRunners: 0
           namespace: github-actions-runner
-      ref: helm-morphacy-entities-journaling-config
+      ref: helm-morphacy
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
@@ -365,7 +365,21 @@ spec:
           githubConfigUrl: https://github.com/Morphacy/Morphacy.Entities
           minRunners: 0
           namespace: github-actions-runner
-      ref: helm-morphacy-entities-config
+      ref: helm-morphacy-entities
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
+        releaseName: chris-pc-morphacy-entities-journaling
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config
+          githubConfigUrl: https://github.com/Morphacy/Morphacy.Entities.Journaling
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-morphacy-entities-journaling
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
