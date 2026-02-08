@@ -348,7 +348,7 @@ spec:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/Morphacy.Entities.Journaling
+          githubConfigUrl: https://github.com/Morphacy/Morphacy.Entities.Journaling
           minRunners: 0
           namespace: github-actions-runner
       ref: helm-morphacy-entities-journaling-config
@@ -362,7 +362,7 @@ spec:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/Morphacy.Entities
+          githubConfigUrl: https://github.com/Morphacy/Morphacy.Entities
           minRunners: 0
           namespace: github-actions-runner
       ref: helm-morphacy-entities-config
