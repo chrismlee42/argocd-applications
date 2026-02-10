@@ -20,7 +20,7 @@ spec:
       targetRevision: HEAD
     - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
       helm:
-        installCrds: false
+        installCRDs: false
         releaseName: github-actions-runner-controller-morphacy
         valuesObject:
           githubConfigSecret: github-config
