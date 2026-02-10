@@ -20,7 +20,7 @@ spec:
       targetRevision: HEAD
     - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
       helm:
-        installCRDs: false
+        skipCrds: true
         releaseName: github-actions-runner-controller-chrismlee42
         valuesObject:
           githubConfigSecret: github-config
