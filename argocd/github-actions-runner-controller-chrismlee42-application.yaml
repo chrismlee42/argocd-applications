@@ -18,15 +18,15 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/github-actions-runner-controller-chrismlee42-config.git
       targetRevision: HEAD
-    - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
-      helm:
-        skipCrds: true
-        releaseName: github-actions-runner-controller-chrismlee42
-        valuesObject:
-          githubConfigSecret: github-config
-      ref: helm-controller
-      repoURL: ghcr.io/actions
-      targetRevision: 0.13.1
+    # - chart: actions-runner-controller-charts/gha-runner-scale-set-controller
+    #   helm:
+    #     skipCrds: true
+    #     releaseName: github-actions-runner-controller-chrismlee42
+    #     valuesObject:
+    #       githubConfigSecret: github-config
+    #   ref: helm-controller
+    #   repoURL: ghcr.io/actions
+    #   targetRevision: 0.13.1
   syncPolicy:
     automated:
       prune: true
