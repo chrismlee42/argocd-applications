@@ -18,20 +18,20 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
       targetRevision: HEAD
-    - chart: actions-runner-controller-charts/gha-runner-scale-set
-      helm:
-        releaseName: chris-pc-argocd-applications
-        valuesObject:
-          controllerServiceAccount:
-            namespace: github-actions-runner-controller-chrismlee42
-            name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-          githubConfigSecret: github-config
-          githubConfigUrl: https://github.com/chrismlee42/argocd-applications
-          minRunners: 0
-          namespace: github-actions-runner
-      ref: helm-argocd-applications
-      repoURL: ghcr.io/actions
-      targetRevision: 0.13.1
+    # - chart: actions-runner-controller-charts/gha-runner-scale-set
+    #   helm:
+    #     releaseName: chris-pc-argocd-applications
+    #     valuesObject:
+    #       controllerServiceAccount:
+    #         namespace: github-actions-runner-controller-chrismlee42
+    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #       githubConfigSecret: github-config
+    #       githubConfigUrl: https://github.com/chrismlee42/argocd-applications
+    #       minRunners: 0
+    #       namespace: github-actions-runner
+    #   ref: helm-argocd-applications
+    #   repoURL: ghcr.io/actions
+    #   targetRevision: 0.13.1
     # - chart: actions-runner-controller-charts/gha-runner-scale-set
     #   helm:
     #     releaseName: chris-pc-argocd
