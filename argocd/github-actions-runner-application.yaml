@@ -18,20 +18,20 @@ spec:
       ref: path
       repoURL: https://github.com/chrismlee42/github-actions-runner-config.git
       targetRevision: HEAD
-    # - chart: actions-runner-controller-charts/gha-runner-scale-set
-    #   helm:
-    #     releaseName: chris-pc-argocd-applications
-    #     valuesObject:
-    #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
-    #       githubConfigUrl: https://github.com/chrismlee42/argocd-applications
-    #       minRunners: 0
-    #       namespace: github-actions-runner
-    #   ref: helm-argocd-applications
-    #   repoURL: ghcr.io/actions
-    #   targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
+        releaseName: chris-pc-argocd-applications
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller-chrismlee42
+            name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+          githubConfigSecret: github-config-chrismlee42
+          githubConfigUrl: https://github.com/chrismlee42/argocd-applications
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-argocd-applications
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
     # - chart: actions-runner-controller-charts/gha-runner-scale-set
     #   helm:
     #     releaseName: chris-pc-argocd
@@ -39,7 +39,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/argocd-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -53,7 +53,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/awx-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -67,7 +67,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/awx-operator-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -81,7 +81,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/ceph-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -95,7 +95,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/cert-manager-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -109,7 +109,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/cilium-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -123,7 +123,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/coredns-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -137,7 +137,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/eck-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -151,7 +151,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/elk-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -165,7 +165,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/external-dns-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -179,7 +179,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/external-secrets-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -193,7 +193,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/fluentd-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -207,7 +207,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/freeipa-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -221,7 +221,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/gateway-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -235,7 +235,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -249,7 +249,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-controller-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -263,7 +263,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/grafana-operator-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -277,7 +277,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/keycloak-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -291,7 +291,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-path-provisioner-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -305,7 +305,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-storage-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -319,7 +319,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-storage-provisioner-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -333,7 +333,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/metrics-server-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -347,7 +347,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-morphacy
     #         name: github-actions-runner-controller-morphacy-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-morphacy
     #       githubConfigUrl: https://github.com/Morphacy/
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -361,7 +361,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/netbox-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -375,7 +375,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/monitoring-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -389,7 +389,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -403,7 +403,7 @@ spec:
     # #       controllerServiceAccount:
     # #         namespace: github-actions-runner-controller-chrismlee42
     # #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    # #       githubConfigSecret: github-config
+    # #       githubConfigSecret: github-config-chrismlee42
     # #       githubConfigUrl: https://github.com/chrismlee42/openebs-config
     # #       minRunners: 0
     # #       namespace: github-actions-runner
@@ -417,7 +417,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/rook-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -431,7 +431,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -445,7 +445,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/valkey-operator-config
     #       minRunners: 0
     #       namespace: github-actions-runner
@@ -459,7 +459,7 @@ spec:
     #       controllerServiceAccount:
     #         namespace: github-actions-runner-controller-chrismlee42
     #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
-    #       githubConfigSecret: github-config
+    #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/vault-config
     #       minRunners: 0
     #       namespace: github-actions-runner
