@@ -23,8 +23,8 @@ spec:
         releaseName: chris-pc-argocd-applications
         valuesObject:
           controllerServiceAccount:
-            namespace: github-actions-runner-controller-chrismlee42
-            name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
           githubConfigSecret: github-config-chrismlee42
           githubConfigUrl: https://github.com/chrismlee42/argocd-applications
           minRunners: 0
@@ -37,8 +37,8 @@ spec:
     #     releaseName: chris-pc-argocd
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/argocd-config
     #       minRunners: 0
@@ -51,8 +51,8 @@ spec:
     #     releaseName: chris-pc-awx
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/awx-config
     #       minRunners: 0
@@ -65,8 +65,8 @@ spec:
     #     releaseName: chris-pc-awx-operator
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/awx-operator-config
     #       minRunners: 0
@@ -79,8 +79,8 @@ spec:
     #     releaseName: chris-pc-ceph
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/ceph-config
     #       minRunners: 0
@@ -93,8 +93,8 @@ spec:
     #     releaseName: chris-pc-cert-manager
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/cert-manager-config
     #       minRunners: 0
@@ -107,8 +107,8 @@ spec:
     #     releaseName: chris-pc-cilium
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/cilium-config
     #       minRunners: 0
@@ -121,8 +121,8 @@ spec:
     #     releaseName: chris-pc-coredns
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/coredns-config
     #       minRunners: 0
@@ -135,8 +135,8 @@ spec:
     #     releaseName: chris-pc-eck
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/eck-config
     #       minRunners: 0
@@ -149,8 +149,8 @@ spec:
     #     releaseName: chris-pc-elk
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/elk-config
     #       minRunners: 0
@@ -163,8 +163,8 @@ spec:
     #     releaseName: chris-pc-external-dns
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/external-dns-config
     #       minRunners: 0
@@ -177,8 +177,8 @@ spec:
     #     releaseName: chris-pc-external-secrets
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/external-secrets-config
     #       minRunners: 0
@@ -191,8 +191,8 @@ spec:
     #     releaseName: chris-pc-fluentd
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/fluentd-config
     #       minRunners: 0
@@ -205,8 +205,8 @@ spec:
     #     releaseName: chris-pc-freeipa
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/freeipa-config
     #       minRunners: 0
@@ -219,8 +219,8 @@ spec:
     #     releaseName: chris-pc-gateway
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/gateway-config
     #       minRunners: 0
@@ -233,8 +233,8 @@ spec:
     #     releaseName: chris-pc-github-actions-runner
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-config
     #       minRunners: 0
@@ -247,8 +247,8 @@ spec:
     #     releaseName: chris-pc-gha-runner-controller
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-controller-config
     #       minRunners: 0
@@ -261,8 +261,8 @@ spec:
     #     releaseName: chris-pc-grafana-operator
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/grafana-operator-config
     #       minRunners: 0
@@ -275,8 +275,8 @@ spec:
     #     releaseName: chris-pc-keycloak
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/keycloak-config
     #       minRunners: 0
@@ -289,8 +289,8 @@ spec:
     #     releaseName: chris-pc-local-path-provisioner
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-path-provisioner-config
     #       minRunners: 0
@@ -303,8 +303,8 @@ spec:
     #     releaseName: chris-pc-local-storage
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-storage-config
     #       minRunners: 0
@@ -317,8 +317,8 @@ spec:
     #     releaseName: chris-pc-local-storage-provisioner
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/local-storage-provisioner-config
     #       minRunners: 0
@@ -331,8 +331,8 @@ spec:
     #     releaseName: chris-pc-metrics-server
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/metrics-server-config
     #       minRunners: 0
@@ -345,8 +345,8 @@ spec:
     #     releaseName: chris-pc-morphacy
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-morphacy
-    #         name: github-actions-runner-controller-morphacy-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-morphacy
     #       githubConfigUrl: https://github.com/Morphacy/
     #       minRunners: 0
@@ -359,8 +359,8 @@ spec:
     #     releaseName: chris-pc-netbox
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/netbox-config
     #       minRunners: 0
@@ -373,8 +373,8 @@ spec:
     #     releaseName: chris-pc-monitoring
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/monitoring-config
     #       minRunners: 0
@@ -387,8 +387,8 @@ spec:
     #     releaseName: chris-pc-nvidia-k8s-device-plugin
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
     #       minRunners: 0
@@ -401,8 +401,8 @@ spec:
     # #     releaseName: chris-pc-openebs
     # #     valuesObject:
     # #       controllerServiceAccount:
-    # #         namespace: github-actions-runner-controller-chrismlee42
-    # #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    # #         namespace: github-actions-runner-controller
+    # #         name: github-actions-runner-controller-gha-rs-controller
     # #       githubConfigSecret: github-config-chrismlee42
     # #       githubConfigUrl: https://github.com/chrismlee42/openebs-config
     # #       minRunners: 0
@@ -415,8 +415,8 @@ spec:
     #     releaseName: chris-pc-rook
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/rook-config
     #       minRunners: 0
@@ -429,8 +429,8 @@ spec:
     #     releaseName: chris-pc-secrets-store-csi-driver
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
     #       minRunners: 0
@@ -443,8 +443,8 @@ spec:
     #     releaseName: chris-pc-valkey-operator
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/valkey-operator-config
     #       minRunners: 0
@@ -457,8 +457,8 @@ spec:
     #     releaseName: chris-pc-vault
     #     valuesObject:
     #       controllerServiceAccount:
-    #         namespace: github-actions-runner-controller-chrismlee42
-    #         name: github-actions-runner-controller-chrismlee42-gha-rs-controller
+    #         namespace: github-actions-runner-controller
+    #         name: github-actions-runner-controller-gha-rs-controller
     #       githubConfigSecret: github-config-chrismlee42
     #       githubConfigUrl: https://github.com/chrismlee42/vault-config
     #       minRunners: 0
