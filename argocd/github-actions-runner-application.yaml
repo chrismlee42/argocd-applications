@@ -356,6 +356,20 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
+        releaseName: chris-pc-mutinysoftware
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config-mutinysoftware
+          githubConfigUrl: https://github.com/mutinysoftware
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-mutinysoftware
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
         releaseName: chris-pc-netbox
         valuesObject:
           controllerServiceAccount:
