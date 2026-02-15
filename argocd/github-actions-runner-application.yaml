@@ -347,7 +347,7 @@ spec:
           controllerServiceAccount:
             namespace: github-actions-runner-controller
             name: github-actions-runner-controller-gha-rs-controller
-          githubConfigSecret: github-config-morphacy
+          githubConfigSecret: github-config-chrismlee42
           githubConfigUrl: https://github.com/Morphacy/
           minRunners: 0
           namespace: github-actions-runner
