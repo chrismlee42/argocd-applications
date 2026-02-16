@@ -1,0 +1,47 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocd-applications
+    managedBy: argocd
+    managementCodeGroup: chrismlee42
+    managementCodeProject: argocd-applications
+  name: openclaw
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: openclaw
+  project: default
+  sources:
+    - path: argocd
+      ref: path
+      repoURL: https://github.com/chrismlee42/openclaw-config.git
+      targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
+      - ServerSideApply=true
+  ignoreDifferences:
+    - group: '*'
+      kind: '*'
+      jqPathExpressions:
+        - |
+          def parsePath(pathStr):
+            (pathStr | split(".")[1:]) as $parts | $parts | map(
+              if test("^\\w+\\[\\d+\\]$") then
+                capture("(?<key>\\w+)\\[(?<index>\\d+)\\]") | [.key, (.index | tonumber)]
+              else
+                [.]
+              end
+            ) | add
+          ;
+          . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
+    - kind: Secret
+      name: openclaw
+      namespace: openclaw
+      jsonPointers:
+        - /data
