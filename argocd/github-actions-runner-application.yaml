@@ -370,20 +370,6 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
-        releaseName: chris-pc-netbox
-        valuesObject:
-          controllerServiceAccount:
-            namespace: github-actions-runner-controller
-            name: github-actions-runner-controller-gha-rs-controller
-          githubConfigSecret: github-config-chrismlee42
-          githubConfigUrl: https://github.com/chrismlee42/netbox-config
-          minRunners: 0
-          namespace: github-actions-runner
-      ref: helm-netbox-config
-      repoURL: ghcr.io/actions
-      targetRevision: 0.13.1
-    - chart: actions-runner-controller-charts/gha-runner-scale-set
-      helm:
         releaseName: chris-pc-monitoring
         valuesObject:
           controllerServiceAccount:
@@ -398,6 +384,20 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
+        releaseName: chris-pc-netbox
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config-chrismlee42
+          githubConfigUrl: https://github.com/chrismlee42/netbox-config
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-netbox-config
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
         releaseName: chris-pc-nvidia-k8s-device-plugin
         valuesObject:
           controllerServiceAccount:
@@ -408,6 +408,20 @@ spec:
           minRunners: 0
           namespace: github-actions-runner
       ref: helm-nvidia-k8s-device-plugin-config
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
+        releaseName: chris-pc-openclaw
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config-chrismlee42
+          githubConfigUrl: https://github.com/chrismlee42/openclaw-config
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-openclaw-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
     # - chart: actions-runner-controller-charts/gha-runner-scale-set
