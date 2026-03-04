@@ -40,3 +40,8 @@ spec:
             ) | add
           ;
           . as $root | .metadata?.annotations?["custom.argocd.argoproj.io/ignore-path"] as $path | $root | getpath(parsePath($path))
+    - kind: Secret
+      name: unifi-mongo-credentials
+      namespace: unifi
+      jsonPointers:
+        - /data
