@@ -468,6 +468,20 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
+        releaseName: chris-pc-unifi
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config-chrismlee42
+          githubConfigUrl: https://github.com/chrismlee42/unifi-config
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-unifi-config
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
         releaseName: chris-pc-valkey-operator
         valuesObject:
           controllerServiceAccount:
