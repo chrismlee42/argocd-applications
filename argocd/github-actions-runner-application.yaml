@@ -328,6 +328,20 @@ spec:
       targetRevision: 0.13.1
     - chart: actions-runner-controller-charts/gha-runner-scale-set
       helm:
+        releaseName: chris-pc-mck
+        valuesObject:
+          controllerServiceAccount:
+            namespace: github-actions-runner-controller
+            name: github-actions-runner-controller-gha-rs-controller
+          githubConfigSecret: github-config-chrismlee42
+          githubConfigUrl: https://github.com/chrismlee42/mck-config
+          minRunners: 0
+          namespace: github-actions-runner
+      ref: helm-mck-config
+      repoURL: ghcr.io/actions
+      targetRevision: 0.13.1
+    - chart: actions-runner-controller-charts/gha-runner-scale-set
+      helm:
         releaseName: chris-pc-metrics-server
         valuesObject:
           controllerServiceAccount:
