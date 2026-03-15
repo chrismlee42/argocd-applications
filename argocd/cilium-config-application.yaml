@@ -43,6 +43,11 @@ spec:
             enableAlpn: true
             xffNumTrustedHops: 0
             externalTrafficPolicy: Local
+            hostNetwork:
+              enabled: true
+              nodes:
+                matchLabels:
+                  kubernetes.io/os: linux
             gatewayClass:
               create: auto
             secretsNamespace:
