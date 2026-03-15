@@ -38,6 +38,17 @@ spec:
                 keepCapNetBindService: true
           gatewayAPI:
             enabled: true
+            enableProxyProtocol: false
+            enableAppProtocol: true
+            enableAlpn: true
+            xffNumTrustedHops: 0
+            externalTrafficPolicy: Local
+            gatewayClass:
+              create: auto
+            secretsNamespace:
+              create: true
+              name: cilium-secrets
+              sync: true
           hubble:
             relay:
               enabled: true
