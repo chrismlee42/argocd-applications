@@ -25,7 +25,7 @@ spec:
           external_IPs: true
           k8sServiceHost: chris-pc
           k8sServicePort: 6443
-          kubeProxyReplacement: partial
+          kubeProxyReplacement: true
           l7proxy: true
           # https://docs.cilium.io/en/stable/security/policy/language/#selecting-nodes-with-cidr-ipblock
           # policyCIDRMatchMode: nodes
