@@ -36,7 +36,9 @@ spec:
             securityContext:
               capabilities:
                 envoy:
+                  - NET_ADMIN
                   - NET_BIND_SERVICE
+                  - SYS_ADMIN
                 keepCapNetBindService: true
           gatewayAPI:
             enabled: true
