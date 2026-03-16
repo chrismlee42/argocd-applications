@@ -49,9 +49,9 @@ spec:
             externalTrafficPolicy: Local
             hostNetwork:
               enabled: true
-              nodes:
-                matchLabels:
-                  kubernetes.io/os: linux
+              # nodes:
+              #   matchLabels:
+              #     kubernetes.io/os: linux
             gatewayClass:
               create: auto
             secretsNamespace:
