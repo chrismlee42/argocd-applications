@@ -35,7 +35,7 @@ spec:
           envoy:
             securityContext:
               capabilities:
-                add:
+                envoy:
                   - NET_BIND_SERVICE
                 keepCapNetBindService: true
           gatewayAPI:
