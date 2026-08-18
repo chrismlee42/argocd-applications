@@ -35,6 +35,7 @@ spec:
             enabled: true
           envoy:
             idleTimeoutDurationSeconds: 0
+            streamIdleTimeoutDurationSeconds: 0
             securityContext:
               capabilities:
                 envoy:
