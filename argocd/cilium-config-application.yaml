@@ -34,6 +34,7 @@ spec:
           bgpControlPlane:
             enabled: true
           envoy:
+            idleTimeoutDurationSeconds: 0
             securityContext:
               capabilities:
                 envoy:
