@@ -46,6 +46,11 @@ spec:
       jsonPointers:
         - /data
     - kind: Secret
+      name: openclaw-github
+      namespace: openclaw
+      jsonPointers:
+        - /data
+    - kind: Secret
       name: google-credentials
       namespace: openclaw
       jsonPointers:
