@@ -124,7 +124,7 @@ spec:
                 - NET_BIND_SERVICE
       ref: helm
       repoURL: https://helm.cilium.io/
-      targetRevision: 1.18.11
+      targetRevision: 1.18.13
       # targetRevision: 1.19.5
   syncPolicy:
     automated:
