@@ -22,6 +22,7 @@ spec:
       helm:
         releaseName: cilium
         valuesObject:
+          upgradeCompatibility: "1.18"
           external_IPs: true
           k8sServiceHost: chris-pc
           k8sServicePort: 6443
