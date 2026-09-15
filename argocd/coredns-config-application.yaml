@@ -43,6 +43,8 @@ spec:
       helm:
         releaseName: coredns
         valuesObject:
+          autoCompactionMode: periodic
+          autoCompactionRetention: "1h"
           installCRDs: true
           isClusterService: false
           serviceType: LoadBalancer
