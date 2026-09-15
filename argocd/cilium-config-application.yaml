@@ -50,7 +50,7 @@ spec:
             enabled: true
             # enableProxyProtocol: false
             # enableAppProtocol: true
-            # enableAlpn: true
+            enableAlpn: true
             # xffNumTrustedHops: 0
             # externalTrafficPolicy: Local
             # hostNetwork:
