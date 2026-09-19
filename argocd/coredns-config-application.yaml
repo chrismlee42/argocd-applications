@@ -31,6 +31,11 @@ spec:
             managedBy: argocd
             managementCodeGroup: chrismlee42
             managementCodeProject: argocd-applications
+          image:
+            pullPolicy: IfNotPresent
+            registry: docker.io
+            repository: bitnamilegacy/etcd
+            tag: 3.6.4-debian-12-r3
           persistence:
             storageClass: local-path
           serviceAccount:
@@ -38,7 +43,7 @@ spec:
             name: etcd
       ref: helm-etcd
       repoURL: registry-1.docker.io/bitnamicharts
-      targetRevision: "10.2.4"
+      targetRevision: "12.0.18"
     - chart: coredns
       helm:
         releaseName: coredns
