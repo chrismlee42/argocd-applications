@@ -86,7 +86,7 @@ spec:
             name: coredns
       ref: helm-coredns
       repoURL: https://coredns.github.io/helm
-      targetRevision: "1.31.0"
+      targetRevision: "1.47.1"
   syncPolicy:
     automated:
       prune: true
