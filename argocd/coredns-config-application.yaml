@@ -106,3 +106,8 @@ spec:
       kind: Secret
       jsonPointers:
         - /data
+    - group: apps
+      kind: StatefulSet
+      name: coredns-etcd
+      jsonPointers:
+        - /spec/template/metadata/annotations/checksum~1token-secret
