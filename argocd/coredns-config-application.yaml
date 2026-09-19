@@ -64,8 +64,11 @@ spec:
             - port: 53
               zones:
                 - zone: chris-pc.clee.private.morphacy.net
+                  use_tcp: true
                 - zone: service.clee.private.morphacy.net
+                  use_tcp: true
                 - zone: service.chris-pc.clee.private.morphacy.net
+                  use_tcp: true
               plugins:
                 # - name: cache
                 #   parameters: 30
