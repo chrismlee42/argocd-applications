@@ -140,3 +140,7 @@ spec:
       namespace: kube-system
       jsonPointers:
         - /data
+    - group: ""
+      kind: Secret
+      jsonPointers:
+        - /data
