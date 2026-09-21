@@ -49,6 +49,7 @@ spec:
             name: external-dns
           sources:
             - gateway-httproute
+            - gateway-tlsroute
             - ingress
             - service
       ref: helm
