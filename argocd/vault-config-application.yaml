@@ -22,6 +22,7 @@ spec:
       helm:
         releaseName: vault
         valuesObject:
+          revisionHistoryLimit: 0
           global:
             enabled: true
             tlsDisable: true

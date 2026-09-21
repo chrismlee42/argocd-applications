@@ -26,6 +26,7 @@ spec:
           # policy: sync
           policy: upsert-only
           provider: coredns
+          revisionHistoryLimit: 0
           commonLabels:
             app: external-dns
             managedBy: argocd

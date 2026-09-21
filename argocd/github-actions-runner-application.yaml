@@ -29,6 +29,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/argocd-applications
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-argocd-applications
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -43,6 +44,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/argocd-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-argocd-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -57,6 +59,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/awx-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-awx-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -71,6 +74,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/awx-operator-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-awx-operator-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -85,6 +89,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/ceph-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-ceph-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -99,6 +104,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/cert-manager-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-cert-manager-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -113,6 +119,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/cilium-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-cilium-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -127,6 +134,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/coredns-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-coredns-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -141,6 +149,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/eck-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-eck-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -155,6 +164,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/elk-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-elk-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -169,6 +179,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/external-dns-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-external-dns-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -183,6 +194,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/external-secrets-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-external-secrets-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -197,6 +209,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/fluentd-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-fluentd-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -211,6 +224,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/freeipa-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-freeipa-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -225,6 +239,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/gateway-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-gateway-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -239,6 +254,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-gha-runner-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -253,6 +269,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/github-actions-runner-controller-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-gha-runner-controller-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -267,6 +284,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/grafana-operator-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-grafana-operator-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -281,6 +299,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/keycloak-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-keycloak-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -295,6 +314,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/local-path-provisioner-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-local-path-provisioner-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -309,6 +329,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/local-storage-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-local-storage-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -323,6 +344,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/local-storage-provisioner-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-local-storage-provisioner-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -337,6 +359,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/mck-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-mck-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -351,6 +374,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/metrics-server-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-metrics-server-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -365,6 +389,7 @@ spec:
           githubConfigUrl: https://github.com/Morphacy
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-morphacy
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -379,6 +404,7 @@ spec:
           githubConfigUrl: https://github.com/mutinysoftware
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-mutinysoftware
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -393,6 +419,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/monitoring-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-monitoring-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -407,6 +434,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/netbox-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-netbox-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -421,6 +449,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/nvidia-k8s-device-plugin-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-nvidia-k8s-device-plugin-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -435,6 +464,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/openclaw-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-openclaw-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -449,6 +479,7 @@ spec:
     #       githubConfigUrl: https://github.com/chrismlee42/openebs-config
     #       minRunners: 0
     #       namespace: github-actions-runner
+    #       revisionHistoryLimit: 0
     #   ref: helm-openebs-config
     #   repoURL: ghcr.io/actions
     #   targetRevision: 0.13.1
@@ -463,6 +494,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/rabbitmq-cluster-operator-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-rabbitmq-cluster-operator-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -477,6 +509,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/rook-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-rook-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -491,6 +524,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/secrets-store-csi-driver-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-secrets-store-csi-driver-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -505,6 +539,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/unifi-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-unifi-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -519,6 +554,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/valkey-operator-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-valkey-operator-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
@@ -533,6 +569,7 @@ spec:
           githubConfigUrl: https://github.com/chrismlee42/vault-config
           minRunners: 0
           namespace: github-actions-runner
+          revisionHistoryLimit: 0
       ref: helm-vault-config
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1

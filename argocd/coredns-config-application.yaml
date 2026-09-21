@@ -23,6 +23,7 @@ spec:
         releaseName: coredns
         valuesObject:
           replicaCount: 1
+          revisionHistoryLimit: 0
           auth:
             rbac:
               create: false
@@ -52,6 +53,7 @@ spec:
           autoCompactionRetention: "1h"
           installCRDs: true
           isClusterService: false
+          revisionHistoryLimit: 0
           serviceType: LoadBalancer
           customLabels:
             app: coredns

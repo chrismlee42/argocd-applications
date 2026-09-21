@@ -53,6 +53,7 @@ spec:
         valuesObject:
           groupName: cert-manager.chris-pc.clee.private.morphacy.net
           nameOverride: cert-manager-webhook-he
+          revisionHistoryLimit: 0
           auth:
             useSecrets: true
           certManager:

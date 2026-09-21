@@ -31,6 +31,7 @@ spec:
           l7proxy: true
           # https://docs.cilium.io/en/stable/security/policy/language/#selecting-nodes-with-cidr-ipblock
           # policyCIDRMatchMode: nodes
+          revisionHistoryLimit: 0
           rollOutCiliumPods: true
           bgpControlPlane:
             enabled: true
