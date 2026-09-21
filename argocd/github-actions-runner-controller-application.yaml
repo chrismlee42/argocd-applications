@@ -23,6 +23,7 @@ spec:
         releaseName: github-actions-runner-controller
         valuesObject:
           githubConfigSecret: github-config
+          revisionHistoryLimit: 0
       ref: helm-controller
       repoURL: ghcr.io/actions
       targetRevision: 0.13.1
