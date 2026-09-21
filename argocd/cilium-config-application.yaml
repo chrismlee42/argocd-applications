@@ -49,7 +49,7 @@ spec:
           gatewayAPI:
             enabled: true
             # enableProxyProtocol: false
-            # enableAppProtocol: true
+            enableAppProtocol: true
             enableAlpn: true
             # xffNumTrustedHops: 0
             # externalTrafficPolicy: Local
